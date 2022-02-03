@@ -2,24 +2,30 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import Store from "./store/Store";
-function App({ estado }) {
+import Game from "./pages/Game/Game";
+import Results from "./pages/Results/Results";
+import Main from "./pages/Main";
+function App() {
   return (
     <Provider store={Store}>
       <Router>
         <Switch>
-          <Route path="/">
-            <div className="">
-            main
+            <Route path="/results">
+            <div className="bg-dark h-100 mh-100 main text-dark">
+
+                <Results></Results>
+              </div>
+            </Route>
+            <Route path="/game">
+            <div className="bg-dark h-100 mh-100 main text-white">
+            <Game></Game>
             </div>
-          </Route>
-
-          <Route path="/game">
-            <div>juego</div>
-          </Route>
-
-          <Route path="/results">
-            <div>resultados : </div>
-          </Route>
+            </Route>
+            <Route path="/">
+              <div className="bg-dark h-100 mh-100 main text-white">
+                <Main></Main>
+              </div>
+            </Route>
         </Switch>
       </Router>
     </Provider>
