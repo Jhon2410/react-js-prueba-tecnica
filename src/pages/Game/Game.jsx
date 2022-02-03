@@ -35,7 +35,7 @@ const Game = ({ question, setRespuestas, agregar, score, reset }) => {
       return (
         <div className="text-center shadow " key={indice}>
           <h1 className="text-center animate__animated animate__bounce animate__delay-1s">{question.category}</h1>
-          <div className="border border-1 p-3 position-absolute top-50 start-50 translate-middle">
+          <div className="border border-1 p-3 position-absolute top-50 start-50 translate-middle bg-dark opacity-50">
             {question.question
               .replaceAll("&quot;", "'")
               .replaceAll("&#039;", "'")
@@ -71,7 +71,7 @@ const Game = ({ question, setRespuestas, agregar, score, reset }) => {
               </button>
             </div>
           </div>
-          <h6 className="position-absolute bottom-0 text-center w-100 animate__animated animate__bounce animate__delay-2s animate__infinite">
+          <h6 className="position-absolute bottom-0 text-center shadow w-100 animate__animated animate__bounce animate__delay-2s animate__infinite">
             question {indice} / 10   - your score is :{score}
           </h6>
         </div>
