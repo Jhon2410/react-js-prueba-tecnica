@@ -33,16 +33,16 @@ const Game = ({ question, setRespuestas, agregar, score, reset }) => {
       }
     if (indice == indexQuestion) {
       return (
-        <div className="text-center" key={indice}>
-          <h1 className="text-center">{question.category}</h1>
+        <div className="text-center " key={indice}>
+          <h1 className="text-center animate__animated animate__bounce animate__delay-1s">{question.category}</h1>
           <div className="border border-1 p-3 position-absolute top-50 start-50 translate-middle">
             {question.question
               .replaceAll("&quot;", "'")
               .replaceAll("&#039;", "'")
               .replaceAll(" &ldquo;", "'")}
-            <div className=" m-3">
+            <div className=" m-3 animate__animated animate__bounce animate__faster">
               <button
-                className="btn btn-success p-3 col-6"
+                className="btn btn-outline-success p-3 col-6"
                 onClick={() =>
                   indexQuestion == 10
                     ? null
@@ -56,7 +56,7 @@ const Game = ({ question, setRespuestas, agregar, score, reset }) => {
                 True
               </button>
               <button
-                className="btn btn-danger p-3 col-6"
+                className="btn btn-outline-danger p-3 col-6"
                 onClick={() =>
                   indexQuestion == 10
                     ? null
@@ -71,8 +71,8 @@ const Game = ({ question, setRespuestas, agregar, score, reset }) => {
               </button>
             </div>
           </div>
-          <h6 className="position-absolute bottom-0 text-center w-100 ">
-            question {indice} / 10 {score}
+          <h6 className="position-absolute bottom-0 text-center w-100 animate__animated animate__bounce animate__delay-2s animate__infinite">
+            question {indice} / 10   - your score is :{score}
           </h6>
         </div>
       );

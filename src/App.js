@@ -1,4 +1,5 @@
-import "./App.css";
+import "./animaciones.css";
+import "./index.css"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import Store from "./store/Store";
@@ -17,7 +18,7 @@ function App() {
               </div>
             </Route>
             <Route path="/game">
-            <div className="bg-dark h-100 mh-100 main text-white">
+            <div className="bg-dark h-100 mh-100 main text-white urlBackground">
             <Game></Game>
             </div>
             </Route>
