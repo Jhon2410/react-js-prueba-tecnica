@@ -33,7 +33,7 @@ const Game = ({ question, setRespuestas, agregar, score, reset }) => {
       }
     if (indice == indexQuestion) {
       return (
-        <div className="text-center " key={indice}>
+        <div className="text-center shadow " key={indice}>
           <h1 className="text-center animate__animated animate__bounce animate__delay-1s">{question.category}</h1>
           <div className="border border-1 p-3 position-absolute top-50 start-50 translate-middle">
             {question.question

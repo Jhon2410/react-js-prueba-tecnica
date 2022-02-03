@@ -18,12 +18,12 @@ function App() {
               </div>
             </Route>
             <Route path="/game">
-            <div className="bg-dark h-100 mh-100 main text-white urlBackground">
+            <div className="bg-dark h-100 mh-100 main text-white urlBackground fw-bold">
             <Game></Game>
             </div>
             </Route>
             <Route path="/">
-              <div className="bg-dark h-100 mh-100 main text-white">
+              <div className="bg-dark h-100 mh-100 main text-white fw-bold urlBackgroundMain">
                 <Main></Main>
               </div>
             </Route>
